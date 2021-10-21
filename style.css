@@ -1,0 +1,181 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --yangColor: #d8c21e;
+  --yinColor: #111111;
+  --width: 100px;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  display: grid;
+  place-items: center;
+  background-color: var(--yinColor);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden auto;
+  perspective: 500px;
+  perspective-origin: 50% calc(50% - 150px);
+}
+
+.banner {
+  display: flex;
+  transform-style: preserve-3d;
+}
+
+.panel {
+  position: relative;
+  width: var(--width);
+  height: 100px;
+  transform: translate(-50%, -50%) rotateY(var(--angle)) translateZ(190px);
+  animation: rotate 6s infinite ease-in-out;
+  overflow: hidden;
+}
+
+.panel:nth-child(1) {
+  --left: 0;
+  --angle: 0deg;
+}
+
+.panel:nth-child(2) {
+  --left: -100px;
+  --angle: 15deg;
+}
+
+.panel:nth-child(3) {
+  --left: -200px;
+  --angle: 30deg;
+}
+
+.panel:nth-child(4) {
+  --left: -300px;
+  --angle: 45deg;
+}
+
+.panel:nth-child(5) {
+  --left: -400px;
+  --angle: 60deg;
+}
+
+.panel:nth-child(6) {
+  --left: -500px;
+  --angle: 75deg;
+}
+
+.panel:nth-child(7) {
+  --left: -600px;
+  --angle: 90deg;
+}
+
+.panel:nth-child(8) {
+  --left: -700px;
+  --angle: 105deg;
+}
+
+.panel:nth-child(9) {
+  --left: -800px;
+  --angle: 120deg;
+}
+
+.panel:nth-child(10) {
+  --left: -900px;
+  --angle: 135deg;
+}
+
+.panel:nth-child(11) {
+  --left: -1000px;
+  --angle: 150deg;
+}
+
+.panel:nth-child(12) {
+  --left: -1100px;
+  --angle: 165deg;
+}
+
+.panel:nth-child(13) {
+  --left: -1200px;
+  --angle: 180deg;
+}
+
+.panel:nth-child(14) {
+  --left: -1300px;
+  --angle: 195deg;
+}
+
+.panel:nth-child(15) {
+  --left: -1400px;
+  --angle: 210deg;
+}
+
+.panel:nth-child(16) {
+  --left: -1500px;
+  --angle: 225deg;
+}
+
+.panel:nth-child(17) {
+  --left: -1600px;
+  --angle: 240deg;
+}
+
+.panel:nth-child(18) {
+  --left: -1700px;
+  --angle: 255deg;
+}
+
+.panel:nth-child(18) {
+  --left: -1700px;
+  --angle: 270deg;
+}
+
+.panel:nth-child(19) {
+  --left: -1800px;
+  --angle: 285deg;
+}
+
+.panel:nth-child(20) {
+  --left: -1900px;
+  --angle: 300deg;
+}
+
+.panel:nth-child(21) {
+  --left: -2000px;
+  --angle: 315deg;
+}
+
+.panel:nth-child(22) {
+  --left: -2100px;
+  --angle: 330deg;
+}
+
+.panel:nth-child(23) {
+  --left: -2200px;
+  --angle: 345deg;
+}
+
+.panel:nth-child(24) {
+  --left: -2300px;
+  --angle: 360deg;
+}
+
+.panel:nth-child(25) {
+  --left: -2400px;
+  --angle: 375deg;
+}
+
+.panel::before {
+  position: absolute;
+  color: var(--yangColor);
+  content: "Hello World, it's a fantastic day!";
+  font-size: 76px;
+  width: max-content;
+  left: var(--left); 
+}
+
+@keyframes rotate {
+  0% { transform: rotateX(0deg); }
+  70%, 100% { transform: rotateX(720deg);}
+}
