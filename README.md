@@ -8,7 +8,7 @@
 
 ## General info
 
-Simple animation of text with rainbow effects.
+Simple 3D animation of text with CSS transform properties.
 
 ## Technologies
 
@@ -17,7 +17,7 @@ Simple animation of text with rainbow effects.
 
 ## Demo
 
-- [click here](https://mikulew.github.io/css-rainbow-text-animation/)
+WIP
 
 ## Resource
 
